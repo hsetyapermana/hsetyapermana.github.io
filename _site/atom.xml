@@ -1,0 +1,596 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+ <title>Poole</title>
+ <link href="http://localhost:4000/atom.xml" rel="self"/>
+ <link href="http://localhost:4000/"/>
+ <updated>2016-12-14T11:48:53+07:00</updated>
+ <id>http://localhost:4000</id>
+ <author>
+   <name>Mark Otto</name>
+   <email>markdotto@gmail.com</email>
+ </author>
+
+ 
+ <entry>
+   <title>inDoc - Markdown Introduction</title>
+   <link href="http://localhost:4000/2016/12/14/markdown-introduction/"/>
+   <updated>2016-12-14T00:00:00+07:00</updated>
+   <id>http://localhost:4000/2016/12/14/markdown-introduction</id>
+   <content type="html">&lt;h2 id=&quot;download&quot;&gt;Download&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://daringfireball.net/projects/downloads/Markdown_1.0.1.zip&quot;&gt;Markdown 1.0.1&lt;/a&gt; (18 KB) – 17 Dec 2004&lt;/p&gt;
+
+&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+
+&lt;p&gt;Markdown is a text-to-HTML conversion tool for web writers. Markdown
+allows you to write using an easy-to-read, easy-to-write plain text
+format, then convert it to structurally valid XHTML (or HTML).&lt;/p&gt;
+
+&lt;p&gt;Thus, “Markdown” is two things: (1) a plain text formatting syntax;
+and (2) a software tool, written in Perl, that converts the plain text
+formatting to HTML. See the &lt;a href=&quot;/projects/markdown/syntax&quot;&gt;Syntax&lt;/a&gt; page for details pertaining to
+Markdown’s formatting syntax. You can try it out, right now, using the
+online &lt;a href=&quot;/projects/markdown/dingus&quot;&gt;Dingus&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The overriding design goal for Markdown’s formatting syntax is to make
+it as readable as possible. The idea is that a Markdown-formatted
+document should be publishable as-is, as plain text, without looking
+like it’s been marked up with tags or formatting instructions. While
+Markdown’s syntax has been influenced by several existing text-to-HTML
+filters, the single biggest source of inspiration for Markdown’s
+syntax is the format of plain text email.&lt;/p&gt;
+
+&lt;p&gt;The best way to get a feel for Markdown’s formatting syntax is simply
+to look at a Markdown-formatted document. For example, you can view
+the Markdown source for the article text on this page here:
+&lt;a href=&quot;http://daringfireball.net/projects/markdown/index.text&quot;&gt;http://daringfireball.net/projects/markdown/index.text&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;(You can use this ‘.text’ suffix trick to view the Markdown source for
+the content of each of the pages in this section, e.g. the
+&lt;a href=&quot;/projects/markdown/syntax.text&quot;&gt;Syntax&lt;/a&gt; and &lt;a href=&quot;/projects/markdown/license.text&quot;&gt;License&lt;/a&gt; pages.)&lt;/p&gt;
+
+&lt;p&gt;Markdown is free software, available under a BSD-style open source
+license. See the &lt;a href=&quot;/projects/markdown/license&quot;&gt;License&lt;/a&gt; page for more information.&lt;/p&gt;
+
+&lt;h2 id=&quot;discussion-list-&quot;&gt;Discussion List &lt;a id=&quot;discussion-list&quot;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;I’ve set up a public &lt;a href=&quot;http://six.pairlist.net/mailman/listinfo/markdown-discuss&quot;&gt;mailing list for discussion about Markdown&lt;/a&gt;.
+Any topic related to Markdown – both its formatting syntax and
+its software – is fair game for discussion. Anyone who is interested
+is welcome to join.&lt;/p&gt;
+
+&lt;p&gt;It’s my hope that the mailing list will lead to good ideas for future
+improvements to Markdown.&lt;/p&gt;
+
+&lt;h2 id=&quot;installation-and-requirements-&quot;&gt;Installation and Requirements &lt;a id=&quot;install&quot;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;Markdown requires Perl 5.6.0 or later. Welcome to the 21st Century.
+Markdown also requires the standard Perl library module &lt;a href=&quot;http://search.cpan.org/dist/Digest-MD5/MD5.pm&quot;&gt;Digest::MD5&lt;/a&gt;, which is probably already installed on your server.&lt;/p&gt;
+
+&lt;h3 id=&quot;movable-type&quot;&gt;Movable Type&lt;/h3&gt;
+
+&lt;p&gt;Markdown works with Movable Type version 2.6 or later (including
+Movable Type 3.0).&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Copy the “Markdown.pl” file into your Movable Type “plugins”
+directory. The “plugins” directory should be in the same directory
+as “mt.cgi”; if the “plugins” directory doesn’t already exist, use
+your FTP program to create it. Your installation should look like
+this:&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;(mt home)/plugins/Markdown.pl
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Once installed, Markdown will appear as an option in Movable Type’s
+Text Formatting pop-up menu. This is selectable on a per-post basis:&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;/graphics/markdown/mt_textformat_menu.png&quot; alt=&quot;Screenshot of Movable Type 'Text Formatting' Menu&quot; /&gt;&lt;/p&gt;
+
+    &lt;p&gt;Markdown translates your posts to HTML when you publish; the posts
+themselves are stored in your MT database in Markdown format.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;If you also install SmartyPants 1.5 (or later), Markdown will
+offer a second text formatting option: “Markdown With
+SmartyPants”. This option is the same as the regular “Markdown”
+formatter, except that it automatically uses SmartyPants to create
+typographically correct curly quotes, em-dashes, and ellipses. See
+the &lt;a href=&quot;http://daringfireball.net/projects/smartypants/&quot;&gt;SmartyPants web page&lt;/a&gt; for more information.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;To make Markdown (or “Markdown With SmartyPants”) your default
+text formatting option for new posts, go to Weblog Config:
+Preferences.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Note that by default, Markdown produces XHTML output. To configure
+Markdown to produce HTML 4 output, see “Configuration”, below.&lt;/p&gt;
+
+&lt;h3 id=&quot;blosxom&quot;&gt;Blosxom&lt;/h3&gt;
+
+&lt;p&gt;Markdown works with Blosxom version 2.0 or later.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Rename the “Markdown.pl” plug-in to “Markdown” (case is
+important). Movable Type requires plug-ins to have a “.pl”
+extension; Blosxom forbids it.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Copy the “Markdown” plug-in file to your Blosxom plug-ins folder.
+If you’re not sure where your Blosxom plug-ins folder is, see the
+Blosxom documentation for information.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;That’s it. The entries in your weblog will now automatically be
+processed by Markdown.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;If you’d like to apply Markdown formatting only to certain
+posts, rather than all of them, Markdown can optionally be used in
+conjunction with Blosxom’s &lt;a href=&quot;http://www.blosxom.com/plugins/meta/meta.htm&quot;&gt;Meta&lt;/a&gt; plug-in. First, install the
+Meta plug-in. Next, open the Markdown plug-in file in a text
+editor, and set the configuration variable &lt;code class=&quot;highlighter-rouge&quot;&gt;$g_blosxom_use_meta&lt;/code&gt;
+to 1. Then, simply include a “&lt;code class=&quot;highlighter-rouge&quot;&gt;meta-markup: Markdown&lt;/code&gt;” header line
+at the top of each post you compose using Markdown.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;bbedit&quot;&gt;BBEdit&lt;/h3&gt;
+
+&lt;p&gt;Markdown works with BBEdit 6.1 or later on Mac OS X. It also works
+with BBEdit 5.1 or later and MacPerl 5.6.1 on Mac OS 8.6 or later. If
+you’re running Mac OS X 10.2 (Jaguar), you may need to install the
+Perl module &lt;a href=&quot;http://search.cpan.org/dist/Digest-MD5/MD5.pm&quot;&gt;Digest::MD5&lt;/a&gt; from CPAN; Digest::MD5 comes
+pre-installed on Mac OS X 10.3 (Panther).&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Copy the “Markdown.pl” file to appropriate filters folder in your
+“BBEdit Support” folder. On Mac OS X, this should be:&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;BBEdit Support/Unix Support/Unix Filters/
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+
+    &lt;p&gt;See the BBEdit documentation for more details on the location of
+these folders.&lt;/p&gt;
+
+    &lt;p&gt;You can rename “Markdown.pl” to whatever you wish.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;That’s it. To use Markdown, select some text in a BBEdit document,
+then choose Markdown from the Filters sub-menu in the “#!” menu, or
+the Filters floating palette&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;configuration--&quot;&gt;Configuration  &lt;a id=&quot;configuration&quot;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;By default, Markdown produces XHTML output for tags with empty elements.
+E.g.:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;br /&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Markdown can be configured to produce HTML-style tags; e.g.:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;br&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;movable-type-1&quot;&gt;Movable Type&lt;/h3&gt;
+
+&lt;p&gt;You need to use a special &lt;code class=&quot;highlighter-rouge&quot;&gt;MTMarkdownOptions&lt;/code&gt; container tag in each
+Movable Type template where you want HTML 4-style output:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;MTMarkdownOptions output='html4'&amp;gt;
+    ... put your entry content here ...
+&amp;lt;/MTMarkdownOptions&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The easiest way to use MTMarkdownOptions is probably to put the
+opening tag right after your &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;body&amp;gt;&lt;/code&gt; tag, and the closing tag right
+before &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;/body&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;To suppress Markdown processing in a particular template, i.e. to
+publish the raw Markdown-formatted text without translation into
+(X)HTML, set the &lt;code class=&quot;highlighter-rouge&quot;&gt;output&lt;/code&gt; attribute to ‘raw’:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;MTMarkdownOptions output='raw'&amp;gt;
+    ... put your entry content here ...
+&amp;lt;/MTMarkdownOptions&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;command-line&quot;&gt;Command-Line&lt;/h3&gt;
+
+&lt;p&gt;Use the &lt;code class=&quot;highlighter-rouge&quot;&gt;--html4tags&lt;/code&gt; command-line switch to produce HTML output from a
+Unix-style command line. E.g.:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;% perl Markdown.pl --html4tags foo.text
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Type &lt;code class=&quot;highlighter-rouge&quot;&gt;perldoc Markdown.pl&lt;/code&gt;, or read the POD documentation within the
+Markdown.pl source code for more information.&lt;/p&gt;
+
+&lt;h2 id=&quot;acknowledgements-&quot;&gt;Acknowledgements &lt;a id=&quot;acknowledgements&quot;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.aaronsw.com/&quot;&gt;Aaron Swartz&lt;/a&gt; deserves a tremendous amount of credit for his feedback on the
+design of Markdown’s formatting syntax. Markdown is &lt;em&gt;much&lt;/em&gt; better thanks
+to Aaron’s ideas, feedback, and testing. Also, Aaron’s &lt;a href=&quot;http://www.aaronsw.com/2002/html2text/&quot;&gt;html2text&lt;/a&gt;
+is a very handy (and free) utility for turning HTML into
+Markdown-formatted plain text.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://bumppo.net/&quot;&gt;Nathaniel Irons&lt;/a&gt;, &lt;a href=&quot;http://hivelogic.com/&quot;&gt;Dan Benjamin&lt;/a&gt;, &lt;a href=&quot;http://waferbaby.com/&quot;&gt;Daniel Bogan&lt;/a&gt;, and &lt;a href=&quot;http://pressedpants.com/&quot;&gt;Jason Perkins&lt;/a&gt;
+also deserve thanks for their feedback.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.michelf.com/projects/php-markdown/&quot;&gt;Michel Fortin&lt;/a&gt; has ported Markdown to PHP; it’s a splendid port, and highly recommended for anyone looking for a PHP implementation of Markdown.&lt;/p&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>inDoc - Into The Wild</title>
+   <link href="http://localhost:4000/2016/12/14/into-the-wild/"/>
+   <updated>2016-12-14T00:00:00+07:00</updated>
+   <id>http://localhost:4000/2016/12/14/into--the-wild</id>
+   <content type="html">&lt;p&gt;The book ‘Into the Wild’ is based on a true story of  Christopher J McCandless, a well educated and able young man from a good family who chased after his dreams and ambitions.&lt;/p&gt;
+
+&lt;p&gt;After graduating from Emory University, Chris gave the balance of his education saving account to Oxfam and disappeared from society to live the life of a recluse and venture into territories where not many have dared. He gave up. of course, his family and friends in doing so.&lt;/p&gt;
+
+&lt;p&gt;The book tells the story from perfect strangers he met, his adolecence, his adventures and failures leading to his untimely passing. The book also gives you examples of other adventures that have similarities to Chris as well as the author who can relate to Chris’s passion for life.&lt;/p&gt;
+
+&lt;p&gt;It is a great book and a great story that will inspire.&lt;/p&gt;
+
+&lt;p&gt;Into the Wild was published in 1996 and spent two years on the New York Times bestseller list. It was written by Jon Krakauer (pictured above right) who wrote the original article on the story in 1993 for Outsider magazine where he gained much of his popularity. You can read more about this article here.&lt;/p&gt;
+
+&lt;p&gt;Krakauer was a mountaineer introduced to the ‘sport’ by his father at aged 8. He had a driving ambition like McCandless as well as a love for nature and the outdoors. He too spent some time in the wilderness alone and climbed Alaskan mountains as well as Everest which was the focus of his book Into Thin Air. Krakauer is quoted as saying about his own adventures that “I got away with it. Chris didn’t. That’s the only difference.”&lt;/p&gt;
+
+&lt;p&gt;Krakauer went to great lengths to write Into The Wild as accurately as possible visiting places that McCandless had been, interviewing family members, friends, colleagues and others somehow involved in the story. He has said that he was obsessed by the story and researched it for 3 years before it was finished. At one stage he said he had a ‘lead’ from someone in Arizona, so he got into his pickup and drove from Alaska to Arizona to meet this person.&lt;/p&gt;
+
+&lt;p&gt;Krakauer also visited the 142 Magic Bus where Chris was found with Bille and Walt McCandless (Chris’s parents) 10 months after they had been informed of his death.&lt;/p&gt;
+
+&lt;p&gt;Krakauer had formed a strong bond with the McCandless family and in fact Carine trusted him the moment she met him. It is through this bond that Krakauer gave 20% of his royalties to Chris’s parents Walt and Billie, who in turn established a foundation in their son’s name, called the Christopher Johnson McCandless Memorial Foundation. This foundation has made donations to countries as far away as Cambodia. Bille has been quoted as saying that they want to reach out to children and help them and their families.&lt;/p&gt;
+
+&lt;p&gt;This is a great interview of Sean Penn and Eddie Vedder on the movie Into the Wild.&lt;/p&gt;
+
+&lt;p&gt;This is a journal entry by Krakauer in the visit book at the Magic Bus&lt;/p&gt;
+
+&lt;p&gt;Krakauer visited the bus many times and this is another note in the 142 Bus visit book : “Chris — Your memory will live on in your admirers. –Jon”&lt;/p&gt;
+
+&lt;p&gt;Into The WIld Chapters&lt;/p&gt;
+
+&lt;p&gt;Author’s Note 
+Into The Wild Chapter 1, The Alaska Interior
+Chris McCandless is hitch-hiking just outside of Fairbanks and is picked up by Jim Gallien on Tuesday April 28, 1992. 
+Chris introduces himself as Alex and shows Gallien a map of the Stampede Trail where he wants to go. Because Alex appeared not to have enopugh equipment or supplies, Gallien gives Alex an old pair of gumboots (rubber boots) and a tuna sandwich. Alex then leaves his watch and other small items in the pick up and wanders off.&lt;/p&gt;
+
+&lt;p&gt;Into The Wild Chapter 2, The Stampede Trail 
+Description of the Stampede Trail and its history in the Alaskan Range. It also describes the 142 Fairbanks Transit Bus (called by Chris McCandless the Magic Bus).  The discovery of Chris’s body on September 6th, 1992 by hunters. His belongings including the SOS note he left on the door of the bus, a camera with unprocessed film and a diary, were removed from the bus by state troopers.&lt;/p&gt;
+
+&lt;p&gt;Into The Wild Chapter 3, Carthage 
+This chapter describes a friend Chris McCandless made on his journey by the name of Wayne Westerberg. Again Wayne picked Chris up hitchhiking in the fall of 1990 and again McCandless introduces himself as Alex. He stayed in touch with Westerberg whilst on his travels, writing to him every now and then. There is some background on Chris, his education and the start of his adventure after leaving all of his education funds to Oxfam. This adventure starts off in his 1982 Datsun B210. This is where he came up with the new name Alexander Supertramp.&lt;/p&gt;
+
+&lt;p&gt;Into The Wild Chapter 4, Detrital Wash 
+Chris McCandless heads to Lake Mead where his Datsun gets stuck in a flash flood, so he takes his belongings and leaves it behind. In a classical moment, he burns the remainder of his money before leaving the car behind. For the next few months he travelled to various destinations working along the way when he needed more money. His parents hire a private investigator to find him - all to no avail. He also bought a cheap canoe and paddled down the Colorado River into Mexico before returning to the US and eventually Las Vegas.&lt;/p&gt;
+
+&lt;p&gt;Into The Wild Chapter 5, Bullhead City 
+Chris McCandless gets a job at McDonalds in Bullhead City, Colorado early in October 1991 where he stays for 2 months living out of a trailor and often working without socks. Afterwards he went to a hippie commune called “The Slabs” Chris lived with 2 new hippie friends called Jan and Bob in their trailer.&lt;/p&gt;
+
+&lt;p&gt;Into The Wild Chapter 6, Anza-Borrego 
+January 1992, Chris McCandless met an old man names Ronald Franz whilt hitchhiking. They became very close and Ronald offered to adopt Chris as his grandson as he had lost his only son and wife in a car accident many yearts earlier.&lt;/p&gt;
+
+&lt;p&gt;Into The Wild Chapter 7, Carthage 
+This chapter relays people’s opinions of Chris McCandless including Wayne Westerberg and others.
+Describes how he is a hard worker, doing jobs that others would not do as well as his personality and stubborness.&lt;/p&gt;
+
+&lt;p&gt;Into The Wild Chapter 8, Alaska
+Examples of other men in their similar adventures and some similarities to Chris McCandless including Gene Rossellini, John Mellon Waterman and Everett Ruess.&lt;/p&gt;
+
+&lt;p&gt;Into The Wild Chapter 9, Davis Gulch
+Specifically describes the adventurer Everett Ruess and his adventures in the early 1900’s. There are many similarities between Ruess and Chris McCandless.&lt;/p&gt;
+
+&lt;p&gt;Into The Wild Chapter 10, Fairbanks
+New York Times article on Chris being found deceased in the Alaskan Wilderness. Chris McCandless could not be identified when he was found as he had discarded all of his identification so describes the process of which he was finally identified.&lt;/p&gt;
+
+&lt;p&gt;Into The Wild Chapter 11, Chesapeake Beach
+Describes Chris’s upbringing, school years and his parents Billie and Walt McCandless.&lt;/p&gt;
+
+&lt;p&gt;Into The Wild Chapter 12, Annandale
+Describes the little adventures Chris McCandless has after graduating from High School and some background on his father who had been married twice but had hidden some truth from Chris about his relationships with both women. He completes College and starts his adventure in 1990.&lt;/p&gt;
+
+&lt;p&gt;Into The Wild Chapter 13, Virginia Beach 
+Chris McCandless’s younger sister Carine talks about Chris as well as his mother Billie.&lt;/p&gt;
+
+&lt;p&gt;Into The Wild Chapter 14, The Stikine Ice Cap 
+The author Jon Krakauer, disputes some theories on Chris’s death and gives some insight into his own past and adventures.&lt;/p&gt;
+
+&lt;p&gt;Into The Wild Chapter 15, The Stikine Ice Cap
+In depth description of Krakauer’s adventure and his relationship with his father.&lt;/p&gt;
+
+&lt;p&gt;Into The Wild Chapter 16, The Alaska Interior
+Chris McCandless hitchhiked from South Dakota to Fairbanks Alaska in April 1992. With limited equipment he started his Alaskan adventure and soon after finds the 142 magic bus. He kills game and eating wild berries to survive. It also describes his wish to leave the alaskan wilderness, but he was unable to due to a large river created by melting ice caps.&lt;/p&gt;
+
+&lt;p&gt;Into The Wild Chapter 17, The Stampede Trail 
+Jon Krakauer’s thoughts on why Chris McCandless made the journey.&lt;/p&gt;
+
+&lt;p&gt;Into The Wild Chapter 18, The Stampede Trail
+McCandless’s last weeks at the bus until his passing. Some thoughts and possible reasons for his untimely death.&lt;/p&gt;
+
+&lt;p&gt;Into The Wild Epilogue 
+Jon Krakauer travels to the bus with Walt and Bille 10 months after they found out about the passing of Christopher Johnson McCandless. Walt installs a plaque memorial on the inside of the bus.&lt;/p&gt;
+
+&lt;p&gt;You can read more about the book on this link.&lt;/p&gt;
+
+&lt;p&gt;Other books written by Jon are Under the Banner of Heaven, Into Thin Air and just released in September 2009, Where Men Win Glory: The Odyssey of Pat Tillman&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Introduction</title>
+   <link href="http://localhost:4000/2016/01/03/introduction/"/>
+   <updated>2016-01-03T00:00:00+07:00</updated>
+   <id>http://localhost:4000/2016/01/03/introduction</id>
+   <content type="html">&lt;p&gt;&lt;em&gt;The Strange Case of Dr. Jekyll and Mr. Hyde&lt;/em&gt; tells the story of a lawyer investigating the connection of two persons, Dr. Henry Jekyll and Mr. Edward Hyde. Chief among the novel’s supporting cast is a man by the name of Mr. Poole, Dr. Jekyll’s loyal butler.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Poole is the butler for &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt;, the static site generator. It’s designed and developed by &lt;a href=&quot;https://twitter.com/mdo&quot;&gt;@mdo&lt;/a&gt; to provide a clear and concise foundational setup for any Jekyll site. It does so by furnishing a full vanilla Jekyll install with example layouts, pages, posts, and styles.&lt;/p&gt;
+
+&lt;p&gt;There are currently three themes built on Poole:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://hyde.getpoole.com&quot;&gt;Hyde&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://lanyon.getpoole.com&quot;&gt;Lanyon&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://enfield.getpoole.com&quot;&gt;Enfield&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Learn more and contribute on &lt;a href=&quot;https://github.com/poole/poole&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;whats-included&quot;&gt;What’s included&lt;/h3&gt;
+
+&lt;p&gt;Poole is a streamlined Jekyll site designed and built as a foundation for building more meaningful themes. Poole, and every theme built on it like this one, includes the following:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Complete Jekyll setup included (layouts, config, &lt;a href=&quot;/404.html&quot;&gt;404&lt;/a&gt;, &lt;a href=&quot;/atom.xml&quot;&gt;RSS feed&lt;/a&gt;, posts, and &lt;a href=&quot;/about&quot;&gt;example page&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Mobile friendly design and development&lt;/li&gt;
+  &lt;li&gt;Easily scalable text and component sizing with &lt;code class=&quot;highlighter-rouge&quot;&gt;rem&lt;/code&gt; units in the CSS&lt;/li&gt;
+  &lt;li&gt;Support for a wide gamut of HTML elements&lt;/li&gt;
+  &lt;li&gt;Related posts (time-based, because Jekyll) below each post&lt;/li&gt;
+  &lt;li&gt;Syntax highlighting, courtesy Jekyll’s built-in support for Rouge&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Additional features are available in individual themes.&lt;/p&gt;
+
+&lt;h3 id=&quot;browser-support&quot;&gt;Browser support&lt;/h3&gt;
+
+&lt;p&gt;Poole and its themes are by preference a forward-thinking project. In addition to the latest versions of Chrome, Safari (mobile and desktop), and Firefox, it is only compatible with Internet Explorer 9 and above.&lt;/p&gt;
+
+&lt;h3 id=&quot;download&quot;&gt;Download&lt;/h3&gt;
+
+&lt;p&gt;These themes are developed on and hosted with GitHub. Head to the &lt;a href=&quot;https://github.com/poole/poole&quot;&gt;GitHub repository&lt;/a&gt; for downloads, bug reports, and features requests.&lt;/p&gt;
+
+&lt;p&gt;Thanks!&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Example content</title>
+   <link href="http://localhost:4000/2016/01/02/example-content/"/>
+   <updated>2016-01-02T00:00:00+07:00</updated>
+   <id>http://localhost:4000/2016/01/02/example-content</id>
+   <content type="html">&lt;div class=&quot;message&quot;&gt;
+  Howdy! This is an example blog post that shows several types of HTML content supported in this theme.
+&lt;/div&gt;
+
+&lt;p&gt;Cum sociis natoque penatibus et magnis &lt;a href=&quot;#&quot;&gt;dis parturient montes&lt;/a&gt;, nascetur ridiculus mus. &lt;em&gt;Aenean eu leo quam.&lt;/em&gt; Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Curabitur blandit tempus porttitor. Nullam quis risus eget urna mollis ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Etiam porta &lt;strong&gt;sem malesuada magna&lt;/strong&gt; mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.&lt;/p&gt;
+
+&lt;h2 id=&quot;inline-html-elements&quot;&gt;Inline HTML elements&lt;/h2&gt;
+
+&lt;p&gt;HTML defines a long list of available inline tags, a complete list of which can be found on the &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element&quot;&gt;Mozilla Developer Network&lt;/a&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;To bold text&lt;/strong&gt;, use &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;strong&amp;gt;&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;To italicize text&lt;/em&gt;, use &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;em&amp;gt;&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;Abbreviations, like &lt;abbr title=&quot;HyperText Markup Langage&quot;&gt;HTML&lt;/abbr&gt; should use &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;abbr&amp;gt;&lt;/code&gt;, with an optional &lt;code class=&quot;highlighter-rouge&quot;&gt;title&lt;/code&gt; attribute for the full phrase.&lt;/li&gt;
+  &lt;li&gt;Citations, like &lt;cite&gt;— Mark otto&lt;/cite&gt;, should use &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;cite&amp;gt;&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;del&gt;Deleted&lt;/del&gt; text should use &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;del&amp;gt;&lt;/code&gt; and &lt;ins&gt;inserted&lt;/ins&gt; text should use &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;ins&amp;gt;&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;Superscript &lt;sup&gt;text&lt;/sup&gt; uses &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;sup&amp;gt;&lt;/code&gt; and subscript &lt;sub&gt;text&lt;/sub&gt; uses &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;sub&amp;gt;&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Most of these elements are styled by browsers with few modifications on our part.&lt;/p&gt;
+
+&lt;h2 id=&quot;footnotes&quot;&gt;Footnotes&lt;/h2&gt;
+
+&lt;p&gt;Footnotes are supported as part of the Markdown syntax. Here’s one in action. Clicking this number&lt;sup id=&quot;fnref:fn-sample_footnote&quot;&gt;&lt;a href=&quot;#fn:fn-sample_footnote&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; will lead you to a footnote. The syntax looks like:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;Clicking this number[^fn-sample_footnote]&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Each footnote needs the &lt;code class=&quot;highlighter-rouge&quot;&gt;^fn-&lt;/code&gt; prefix and a unique ID to be referenced for the footnoted content. The syntax for that list looks something like this:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;[^fn-sample_footnote]: Handy! Now click the return link to go back.&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;You can place the footnoted content wherever you like. Markdown parsers should properly place it at the bottom of the post.&lt;/p&gt;
+
+&lt;h2 id=&quot;heading&quot;&gt;Heading&lt;/h2&gt;
+
+&lt;p&gt;Vivamus sagittis lacus vel augue rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.&lt;/p&gt;
+
+&lt;h3 id=&quot;code&quot;&gt;Code&lt;/h3&gt;
+
+&lt;p&gt;Inline code is available with the &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;code&amp;gt;&lt;/code&gt; element. Snippets of multiple lines of code are supported through Pygments. Longer lines will automatically scroll horizontally when needed.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// Example can be run directly in your JavaScript console
+&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// Create a function that takes two arguments and returns the sum of those arguments
+&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;adder&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;a&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;b&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;return a + b&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// Call the function
+&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;adder&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// &amp;gt; 8&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;You may also optionally show code snippets with line numbers. Add &lt;code class=&quot;highlighter-rouge&quot;&gt;linenos&lt;/code&gt; to the Pygments tags.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;c1&quot;&gt;// Example can be run directly in your JavaScript console
+&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// Create a function that takes two arguments and returns the sum of those arguments
+&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;adder&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;a&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;b&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;return a + b&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// Call the function
+&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;adder&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// &amp;gt; 8&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.&lt;/p&gt;
+
+&lt;h3 id=&quot;gists-via-github-pages&quot;&gt;Gists via GitHub Pages&lt;/h3&gt;
+
+&lt;p&gt;Vestibulum id ligula porta felis euismod semper. Nullam quis risus eget urna mollis ornare vel eu leo. Donec sed odio dui.&lt;/p&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/13f94b734a4ddb132735.js?file=gist.md&quot;&gt; &lt;/script&gt;
+
+&lt;p&gt;Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec sed odio dui. Vestibulum id ligula porta felis euismod semper.&lt;/p&gt;
+
+&lt;h3 id=&quot;lists&quot;&gt;Lists&lt;/h3&gt;
+
+&lt;p&gt;Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Praesent commodo cursus magna, vel scelerisque nisl consectetur et.&lt;/li&gt;
+  &lt;li&gt;Donec id elit non mi porta gravida at eget metus.&lt;/li&gt;
+  &lt;li&gt;Nulla vitae elit libero, a pharetra augue.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Vestibulum id ligula porta felis euismod semper.&lt;/li&gt;
+  &lt;li&gt;Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.&lt;/li&gt;
+  &lt;li&gt;Maecenas sed diam eget risus varius blandit sit amet non magna.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at lobortis.&lt;/p&gt;
+
+&lt;dl&gt;
+  &lt;dt&gt;HyperText Markup Language (HTML)&lt;/dt&gt;
+  &lt;dd&gt;The language used to describe and define the content of a Web page&lt;/dd&gt;
+
+  &lt;dt&gt;Cascading Style Sheets (CSS)&lt;/dt&gt;
+  &lt;dd&gt;Used to describe the appearance of Web content&lt;/dd&gt;
+
+  &lt;dt&gt;JavaScript (JS)&lt;/dt&gt;
+  &lt;dd&gt;The programming language used to build advanced Web sites and applications&lt;/dd&gt;
+&lt;/dl&gt;
+
+&lt;p&gt;Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam quis risus eget urna mollis ornare vel eu leo.&lt;/p&gt;
+
+&lt;h3 id=&quot;images&quot;&gt;Images&lt;/h3&gt;
+
+&lt;p&gt;Quisque consequat sapien eget quam rhoncus, sit amet laoreet diam tempus. Aliquam aliquam metus erat, a pulvinar turpis suscipit at.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://placehold.it/800x400&quot; alt=&quot;placeholder&quot; title=&quot;Large example image&quot; /&gt;
+&lt;img src=&quot;http://placehold.it/400x200&quot; alt=&quot;placeholder&quot; title=&quot;Medium example image&quot; /&gt;
+&lt;img src=&quot;http://placehold.it/200x200&quot; alt=&quot;placeholder&quot; title=&quot;Small example image&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;tables&quot;&gt;Tables&lt;/h3&gt;
+
+&lt;p&gt;Aenean lacinia bibendum nulla sed consectetur. Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Name&lt;/th&gt;
+      &lt;th&gt;Upvotes&lt;/th&gt;
+      &lt;th&gt;Downvotes&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tfoot&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Totals&lt;/td&gt;
+      &lt;td&gt;21&lt;/td&gt;
+      &lt;td&gt;23&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tfoot&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Alice&lt;/td&gt;
+      &lt;td&gt;10&lt;/td&gt;
+      &lt;td&gt;11&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Bob&lt;/td&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Charlie&lt;/td&gt;
+      &lt;td&gt;7&lt;/td&gt;
+      &lt;td&gt;9&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Nullam id dolor id nibh ultricies vehicula ut id elit. Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Want to see something else added? &lt;a href=&quot;https://github.com/poole/poole/issues/new&quot;&gt;Open an issue.&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:fn-sample_footnote&quot;&gt;
+      &lt;p&gt;Handy! Now click the return link to go back. &lt;a href=&quot;#fnref:fn-sample_footnote&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>What's Jekyll?</title>
+   <link href="http://localhost:4000/2016/01/01/whats-jekyll/"/>
+   <updated>2016-01-01T00:00:00+07:00</updated>
+   <id>http://localhost:4000/2016/01/01/whats-jekyll</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; is a static site generator, an open-source tool for creating simple yet powerful websites of all shapes and sizes. From &lt;a href=&quot;https://github.com/jekyll/jekyll/blob/master/README.markdown&quot;&gt;the project’s readme&lt;/a&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Jekyll is a simple, blog aware, static site generator. It takes a template directory […] and spits out a complete, static website suitable for serving with Apache or your favorite web server. This is also the engine behind GitHub Pages, which you can use to host your project’s page or blog right here from GitHub.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;It’s an immensely useful tool. Find out more by &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;visiting the project on GitHub&lt;/a&gt;.&lt;/p&gt;
+</content>
+ </entry>
+ 
+
+</feed>
